@@ -95,11 +95,13 @@ if (count($_POST) > 0) {
     <section id="resume">
       <h2>Résumé</h2>
       <?php
-      $conversion = array(
-        'euros' => 1,
-        'pesos' => 0.054,
-        'dollars' => 0.92
-      );
+      $url_devise = 'https://api.exchangerate-api.com/v4/latest/EUR';
+      $json = file_get_contents($url_devise);
+      $data = json_decode($json, true);
+      $conversion['euros'] = 1;
+      $conversion['pesos'] = round(1/$data['rates']['MXN'], 2);
+      $conversion['dollars'] = round(1/$data['rates']['USD'], 2);
+
       $reponse = $mysqlClient->query('SELECT devise, SUM(montant) AS total FROM spend GROUP BY devise');
       $total = 0;
       foreach ($reponse as $row) {
@@ -134,7 +136,7 @@ if (count($_POST) > 0) {
           <th>Devise</th>
         </tr>
         <?php
-        $reponse = $mysqlClient->query('SELECT * FROM spend ORDER BY date DESC');
+        $reponse = $mysqlClient->query('SELECT * FROM spend ORDER BY date DESC, time_ajout DESC');
         while ($donnees = $reponse->fetch()) {
           echo '<tr onclick="click_line(' . $donnees['id'] . ')">';
           echo '<td>' . $donnees['date'] . '</td>';
