@@ -129,6 +129,7 @@ if (count($_POST) > 0) {
       <h2>Dépenses</h2>
       <table id="table_depenses">
         <tr id="header_line">
+          <th></th>
           <th>Date</th>
           <th>Description</th>
           <th>Catégorie</th>
@@ -138,7 +139,8 @@ if (count($_POST) > 0) {
         <?php
         $reponse = $mysqlClient->query('SELECT * FROM spend ORDER BY date DESC, time_ajout DESC');
         while ($donnees = $reponse->fetch()) {
-          echo '<tr onclick="click_line(' . $donnees['id'] . ')">';
+          echo '<tr>';
+          echo '<td><a href=javascript:click_line(' . $donnees['id'] . ')><img src="remove.png" height="30" width="30"></a></td>';
           echo '<td>' . $donnees['date'] . '</td>';
           echo '<td class="colonne_description">' . $donnees['nom'] . '</td>';
           echo '<td>' . $donnees['categorie'] . '</td>';

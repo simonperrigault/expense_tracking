@@ -110,16 +110,6 @@ th {
   padding: 0 10px;
 }
 
-#header_line:hover {
-  text-decoration: none;
-  cursor: default;
-}
-
-tr:hover {
-  text-decoration: line-through;
-  cursor: pointer;
-}
-
 @media screen and (max-width: 900px) {
   main {
     flex-direction: column;
