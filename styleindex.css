@@ -1,0 +1,133 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+select {
+  width: 100%;
+  padding:10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius:10px;
+  background-color: #ffffff;
+}
+
+input[type="submit"] {
+  color: #005d70;
+  font-weight: bolder;
+  font-size: large;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  white-space: nowrap;
+}
+
+input[type="submit"] {
+  margin-left: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;  
+}
+
+#resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+section {
+  background-color: #fef6e9;
+  padding: 20px;
+  border-radius:10px;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #fef6e9;
+  padding: 20px;
+  border-radius:10px;
+  margin-top: 10px;
+}
+
+#saisie_montant {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+td {
+  white-space: nowrap;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.colonne_description {
+  text-align: left;
+}
+
+th {
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+#header_line:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+tr:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #depenses_section {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
