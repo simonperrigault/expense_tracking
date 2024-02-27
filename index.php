@@ -77,7 +77,7 @@ if (count($_POST) > 0) {
       </div>
       <div id="saisie_montant">
         <label for="amount">Montant* : </label>
-        <input type="number" name="amount" id="amount" max="4000000000" autofocus required />
+        <input type="number" name="amount" id="amount" min="0" step="0.01" max="4000000000" autofocus required />
         <select name="devise" id="devise" required>
           <option value="euros" selected>€ euros</option>
           <option value="pesos">MXN pesos</option>
