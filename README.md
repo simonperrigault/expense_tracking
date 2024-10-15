@@ -1,4 +1,4 @@
-# Pathfinding algorithms
+# Expense tracking
 
 ![Contributors](https://img.shields.io/github/contributors/simonperrigault/expense_tracking)
 ![Forks](https://img.shields.io/github/forks/simonperrigault/expense_tracking)
