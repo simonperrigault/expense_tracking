@@ -13,6 +13,6 @@ It is written in PHP for the backend part and HTML/CSS for the frontend, with a 
 
 ## How to use
 
-* Go to the website : https://simon-test-romane.wuaze.com/index.php?i=1
+* Go to the website : ~https://simon-test-romane.wuaze.com/index.php?i=1~ (no longer hosted)
 * Enjoy the interface in French :)
 * You can add spends in the first section, then see a summary with some statistics in the second part and then all the spends in the database, where you can delete them too.
